@@ -1,0 +1,28 @@
+{
+	"name": "ovsdriver",
+	"description": "Openvswitch utility commands wrapper ",
+	"version": "0.0.1",
+	"author": "Suresh Kumar",	
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/sureshkvl/ovsdriver.git"
+	},
+	"keywords": ["openvswitch"],
+	"dependencies": {	
+	},
+	"devDependencies": {
+		"coffee-script": ">=1.9"
+	},
+	"config":{
+		"debianpackages":["openvswitch-switch"]	
+	},
+	"main": "./lib/ovs",
+	"license": "MIT",
+	"homepage": "http://kaanalnet.org",
+	"scripts": {		
+		"start": "nodejs lib/ovs.js"		
+	},
+	"contributors": [
+		""	
+	]
+}
