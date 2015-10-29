@@ -68,4 +68,9 @@ class OVS
 		@execute command,(result) =>
 			callback result
 
+	setDPid : (bridgename,dpid, callback)->
+		command = "ovs-vsctl set bridge #{bridgename} other_config:datapath-id=#{dpid}"
+		@execute command,(result) =>
+			callback result
+
 module.exports = new OVS
