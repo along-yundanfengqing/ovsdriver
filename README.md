@@ -53,12 +53,11 @@ written in coffeescript.
 This is just indicative program to demonstrate functionality . It cannot run as it is.         
 
 
-ovs = require('ovsdriver')
-ovs.createBridge "sw1", (result) =>
-    util.log "Bridge creation " + result                                
-
-ovs.addInterface "sw1", "veth1",(result) =>
-    util.log "AddInterface result", result
+        ovs = require('ovsdriver')
+        ovs.createBridge "sw1", (result) =>
+            util.log "Bridge creation " + result                               
+        ovs.addInterface "sw1", "veth1",(result) =>
+            util.log "AddInterface result", result
 
 
 This driver is used in Kaanalnet application to manage ovs, 
