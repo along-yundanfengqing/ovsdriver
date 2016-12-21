@@ -20,8 +20,9 @@ class OVS
 		@execute command,(result) =>
 			callback result
 
-	addInterface : (bridgname,ifname,callback) ->
-		command = "ovs-vsctl add-port #{bridgname} #{ifname}"
+	addInterface : (bridgname,ifname,vlan,callback) ->
+		command = "ovs-vsctl add-port #{bridgname} #{ifname} tag= #{vlan} " if vlan?
+		command = "ovs-vsctl add-port #{bridgname} #{ifname} " unless vlan?
 		@execute command,(result) =>
 			callback result
 
